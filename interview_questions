@@ -12,3 +12,33 @@ def fmn(numbers):     #fmn - find missing numbers
 numbers=[1, 3, 4, 6, 8, 9, 10]
 missing_numbers=fmn(numbers)
 print("Missing Numbers: ", missing_numbers)
+
+2)You are a passport issuer, but due to some problems in the system, there are redundant  passport numbers. Your task is to delete all the duplicate passport numbers. You are given a list of passport numbers.
+
+Input Description:
+You are given length of list.Second line,You are given with a list.
+
+Output Description:
+Print the list of passport numbers without duplicates.
+
+Sample Input :
+5
+A23 B56 B56 C79 D16
+
+Sample Output :
+A23 B56 C79 D16
+
+solution:
+def remove_duplicates(passport_numbers):
+  # new_set=set()
+  unique_elements=[]
+  for i in passport_numbers:
+    if i not in unique_elements:
+      unique_elements.append(i)
+      # new_set.add(i)
+  return unique_elements
+      
+n=int(input())
+output=input().split()
+final_result=remove_duplicates(output)
+print(' '.join(final_result))
